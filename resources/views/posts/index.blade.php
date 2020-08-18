@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">
                     <h4>{{$post->title}}</h4>
-                    <span>{{$post->category_id}} - {{$post->subcategory_id}}</span>
+                    <span>{{$categories->find($post->category_id)->title}} - {{$subcategories->find($post->subcategory_id)->title}}</span>
                 </div>
                 <div class="card-body">
                     <span>{{$post->description}}</span>
