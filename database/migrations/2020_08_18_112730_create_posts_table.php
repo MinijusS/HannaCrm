@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->integer('category_id');
-            $table->integer('sub-category_id');
+            $table->integer('subcategory_id');
             $table->text('description');
             $table->timestamps();
         });

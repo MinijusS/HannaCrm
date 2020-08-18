@@ -1,1 +1,28 @@
-//
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #dfe6e9;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    a {
+        font-size: 20px;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    margin-bottom: 20px;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}

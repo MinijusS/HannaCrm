@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>HannaCrm</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    </head>
-    <body>
-        <h3>Sveiki!</h3>
-    </body>
-</html>
+@section('content')
+    <h3>Skelbimų sąrašas</h3>
+    <div class="posts">
+        @foreach($posts as $post)
+            <div class="card">
+                <div class="card-header">
+                    <h4>{{$post->title}}</h4>
+                    <span>{{$post->category_id}} - {{$post->subcategory_id}}</span>
+                </div>
+                <div class="card-body">
+                    <span>{{$post->description}}</span>
+                </div>
+            </div>
+        @endforeach
+    </div>
+@endsection
