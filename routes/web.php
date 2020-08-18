@@ -17,4 +17,5 @@ Route::get('/', function () {
     return redirect()->route('posts.index');
 });
 
+//Resource route for index, create, update, etc...
 Route::resource('posts', 'PostController');
