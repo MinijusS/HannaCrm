@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    protected $fillable = ['title', 'category_id', 'subcategory_id', 'description'];
+
     //Creating relationship between post and category
-    public function categories()
+    public function category()
     {
-        return $this->hasOne(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
     //Creating relationship between post and sub-category

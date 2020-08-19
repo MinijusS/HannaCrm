@@ -15,4 +15,5 @@
             </div>
         @endforeach
     </div>
+    <modal-component :categories="{{$categories}}"></modal-component>
 @endsection

@@ -45,7 +45,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Checking if input fields are not empty
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'category_id' => 'required',
+            'subcategory_id' => 'required',
+            'description' => 'required',
+        ]);
+
+        //Creating new post with requested data
+        $post = new Post($validatedData);
+        $post->save();
+
+        return redirect()->route('posts.index');
     }
 
     /**
